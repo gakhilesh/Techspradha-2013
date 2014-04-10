@@ -1,0 +1,75 @@
+<html>
+<head>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('#catagories li').click(function(){
+		var id = this.getAttribute('id');
+		
+		$.ajax({
+			url:'events.json',
+			dataType:'json',
+			success:function(data){
+				$('#'+id+'-events').html("hello");
+			},
+			statusCode:{
+				404:function(){
+					alert("oops");
+				}
+			}
+		
+		});
+	});
+});
+</script>
+<style type="text/css">
+#lightbox{
+	height:400px;
+}
+#catagories li{
+	cursor:pointer;
+}
+#lightbox div{
+	height:350px;
+	width:500px;
+	float:left;
+}
+#cat1-events{
+	background:#0aa;
+	display:
+}
+#cat2-events{
+	background:#ee0;
+}
+#cat3-events{
+	background:#00f0f0;
+}
+#cat4-events{
+	background:#00f;
+}
+#cat5-events{
+	background:#0f0;
+}
+
+</style>
+</head>
+<body>
+	<div id="lightbox">
+		<div id="cat1-events">Design-events</div>
+		<div id="cat2-events">Technopolis events</div>
+		<div id="cat3-events">Managerial Events</div>
+		<div id="cat4-events">Funzone events</div>
+		<div id="cat5-events">Director torphy event</div>
+	</div>
+	<div>
+		<ul id="catagories">
+			<li id="cat1">Design</li>
+			<li id="cat2">Technopolish</li>
+			<li id="cat3">Managerial</li>
+			<li id="cat4">Funzone</li>
+			<li id="cat5">Director Trophy</li>
+		</ul>
+	</div>
+</body>
+</html>

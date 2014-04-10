@@ -1,0 +1,125 @@
+<html>
+<head>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//alert("hello");
+	$('#click').click(function(){
+		
+	});
+$("#cat li").click(function(){
+	id = $(this).attr('id');
+	var eventsLoaded = false;
+		$.getJSON('simple.json',function(data){
+		var items = [];
+		var evntDesc = [];
+		var evntRules = [];
+		var evntContact = [];
+		var catid;
+		$.each(data, function(key,value){
+				//items.push('<li id="'+key+'"> '+value["evnt_name"]+'</li>');
+				items.push('<li id="'+value["evnt_id"]+'"> '+value["evnt_name"]+'</li>');
+				evntDesc.push('<li id="'+value["evnt_id"]+'"> '+value["evnt_desc"]+'</li>');
+				evntRules.push('<li id="'+value["evnt_id"]+'"> '+value["evnt_rule"]+'</li>');
+				catid = value["evnt_category"];
+				//evntContact.push('<li id="'+value["evnt_id"]+'"> '+value["contact"]["name"]+'</li>');
+				//alert(value["evnt_name"]);
+				//$("#content").appendTo(key+':'+value);
+			});
+			alert(catid);
+			//alert("#cat"+id+" .event-list");
+			$("#cat"+catid).html(items.join(''));
+			
+			});
+	lightBoxLoad(id);
+});
+
+});
+function lightBoxLoad(id){
+		$('.visible').fadeOut(100,function(){
+			$("#cat"+id).fadeIn(100);
+			$('.visible').removeClass();
+			$("#cat"+id).addClass("visible");
+		});
+		
+}
+
+</script>
+<style type="text/css">
+	#cat1,#cat2,#cat3{
+		display:none;
+	}
+	.cat-list li{
+		display:block;
+	}
+	.event-list{
+		list-style:none;
+	}
+	.event-list li{
+		float:left;
+		padding:10px;
+	}
+	.clear{
+		clear:both;
+	}
+	#eventTabs{
+		width:200px;
+		float:left;
+	}
+	#event-description{
+		width:500px;
+		float:left;
+	}
+	#cat1 .event-list{
+	
+	}
+</style>
+</head>
+<body>
+<a id="click" href="#">Click here</a>
+<div id="lightbox">
+	<ul class="cat-list">
+		<li id="cat1" class="visible">
+			<ul class="event-list">
+			</ul>
+			<div class="clear"></div>
+			<ul id="eventTabs">
+						<li>Event Description</li>
+						<li>Rules and Regulations</li>
+						<li>Problem Statement</li>
+						<li>Contact</li>
+			</ul>
+			<div id="event-description">This is the description for event1</div>
+			
+		</li>
+		<div class="clear"></div>
+		<li id="cat2">
+			<ul class="event-list">
+				<li><span id="eventTitle">Robotics</span></li>
+				<li><span id="eventTitle">Robowars</span></li>
+			</ul>
+			<div class="clear"></div>
+		</li>
+		<div class="clear"></div>
+		<li id="cat3">
+			<ul class="event-list">
+				<li><span id="eventTitle">Nimbus</span></li>
+				<li><span id="eventTitle">coabenitio</span></li>
+				<div class="clear"></div>
+			</ul>
+
+		</li>
+	</ul>
+	<ul class="event-list">
+		
+	</ul>
+</div>
+
+<ul id="cat">
+	<li id="1">Managerial</li>
+	<li id="2">Design</li>
+	<li id="3">Technopolis</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+   {
+      "feed_id":"44",
+      "feed_title":"schedule for 16th jan 2013",
+      "feed_message":"Chandan kumar(CSE) will discuss his \"amazon experiences\" and development on android platform while akhilesh Garg(CSE) will talk about website development",
+      "evnt_id":"108",
+      "evnt_name":"TechBest 2k9",
+      "feed_timestamp":"2013-01-15 09:26:35",
+      "usr_name":"Vijeta Marwah"
+   },
+   {
+      "feed_id":"27",
+      "feed_title":"Problem Statement Updated",
+      "feed_message":"An all new, super exciting problem statement for Robowars. Do check!!!",
+      "evnt_id":"79",
+      "evnt_name":"RoboWars",
+      "feed_timestamp":"2013-01-08 13:14:12",
+      "usr_name":"Abhishek Garg"
+   },
+   {
+      "feed_id":"26",
+      "feed_title":"Rules & Regulations",
+      "feed_message":"This is elimination round. Round comprises of one written exam to check the knowledge of participating teams in the domains of probability, risk management, creativity and general awareness. Time allotted for writing would be 50 mins.Around 15 teams will ",
+      "evnt_id":"60",
+      "evnt_name":"Industry Wars",
+      "feed_timestamp":"2013-01-08 09:32:33",
+      "usr_name":"Deepak sindhu"
+   },
+   {
+      "feed_id":"24",
+      "feed_title":"Event details",
+      "feed_message":"1: Team size is constrained to 2 candidates per team. 2: This event would comprise of 3 rounds",
+      "evnt_id":"60",
+      "evnt_name":"Industry Wars",
+      "feed_timestamp":"2013-01-08 09:10:36",
+      "usr_name":"Deepak sindhu"
+   }
+]

@@ -1,0 +1,130 @@
+<html>
+<head>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//alert("hello");
+	$('#click').click(function(){
+		alert("hello");
+	});
+	var eventsLoaded = false;
+	var data1;
+$("#cat li").click(function(){
+		id = $(this).attr('id');
+		if(eventsLoaded == false){
+			$.getJSON('events.json',function(data){
+				data1 = data;
+				alert(eventsLoaded);
+				eventsLoaded = true;
+				displayEvents(data1,id);
+			});
+		}
+		else{
+			displayEvents(data1,id);
+		}
+		
+});
+
+function displayEvents(data,id){
+		var eventlist = [];
+		var eventContent = [];
+		var catBoxContent = [];
+		var catid,eventid;
+		count = 1;
+		$.each(data, function(key,value){
+				//items.push('<li id="'+key+'"> '+value["evnt_name"]+'</li>');
+				//items.push('<li id="'+value["evnt_id"]+'"> '+value["evnt_name"]+'</li>');
+				//evntDesc.push('<li id="'+value["evnt_id"]+'"> '+value["evnt_desc"]+'</li>');
+				//evntRules.push('<li id="'+value["evnt_id"]+'"> '+value["evnt_rule"]+'</li>');
+				catid = value["evnt_category"];
+				//evntContact.push('<li id="'+value["evnt_id"]+'"> '+value["contact"]["name"]+'</li>');
+				//alert(value["evnt_name"]);
+				//$("#content").appendTo(key+':'+value);
+				if(id==catid){
+					eventid = value["evnt_id"];
+					eventDesc = value["evnt_description"];
+					eventTag = value["evnt_tagline"];
+					rules = value["evnt_rulesnregulations"];
+					time = value["evnt_time"];
+					venue = value["venue_name"];
+					contact = value["coordinators"];
+					category = value["cat_name"];
+					tagline = value["evnt_tagline"];
+					eventlist.push('<li><a href="#" title="tab'+count+'">'+value["evnt_name"]+'</a></li>');
+					eventContent.push('<div id="tab'+id+count+'"><ul id="event-detail-tab">');
+					eventContent.push('<li id="descTab'+id+count+'" class="event-tab-selected">Event Description</li>');
+					eventContent.push('<li id="rulesTab'+id+count+'">Rules and Regulation</li>');
+					eventContent.push('<li id="problemTab'+id+count+'">Problem Statement</li>');
+					eventContent.push('<li id="timevenueTab'+id+count+'">Time/Venue</li>');
+					eventContent.push('<li id="contactTab'+id+count+'">Contact</li>');
+					eventContent.push('</ul>');
+					eventContent.push('<span id="event-content">');
+					eventContent.push('<span id="desc'+id+count+'">'+eventDesc+'</span><br/>');
+					eventContent.push('<span id="rules'+id+count+'">'+rules+'</span><br/>');
+					eventContent.push('<span id="problem'+id+count+'">problem statement</span><br/>');
+					eventContent.push('<span id="timevenue'+id+count+'">Venue:<br/>'+venue+'<br/>Time:<br/>'+time+'</span><br/>');
+					eventContent.push('<span id="contact'+id+count+'">'+contact+'</span>');
+					eventContent.push('</span>');
+					eventContent.push('</div>');
+					catBoxContent.push('<div id="cat_box_content"><span id="cat_title">'+category+'</span>');
+					catBoxContent.push('<span id="event_title">'+value["evnt_name"]+'</span>');
+					catBoxContent.push('<span id="eventTag">'+tagline+'</span>');
+					catBoxContent.push('</div>');
+					//items.push('<li id="'+eventid+'"> '+value["evnt_name"]+'</li>');
+					count++;
+					$("#tabs").html(eventlist.join(''));
+					$("#content").html(eventContent.join(''));
+					$("#lowerBox").html(catBoxContent.join(''));
+				}
+				
+			});
+			//alert("#cat"+id+" .event-list");
+			
+			//$("#cat"+catid).html(items.join(''));
+	}
+});
+
+</script>
+
+</head>
+<body>
+<ul id="cat">
+	<li id="1"><a class="click" href="#">Cat1</a></li>
+	<li id="2"><a class="click" href="#">Cat2</a></li>
+	<li id="3"><a class="click" href="#">Cat3</a></li>
+	<li id="4"><a class="click" href="#">Cat4</a></li>
+	<li id="5"><a class="click" href="#">Cat5</a></li>
+</ul>
+<ul id="tabs">
+<!--  
+  <li><a href="#" title="tab1">Excalibur</a></li>
+    <li><a href="#" title="tab2">Two</a></li>
+-->
+</ul>
+
+<div id="content"> 
+<!--   
+   <div id="tab1">
+    	<ul id="event-detail-tab">
+    		<li id="descTab" class="event-tab-selected">Event Description</li>
+    		<li id="rulesTab">Rules and Regulation</li>
+    		<li id="problemTab">Problem Statement</li>
+    		<li id="contactTab">Contact</li>
+    	</ul>
+		<span id="event-content">
+			<span id="desc">Details of the event excalibur to be uploaded soon</span>
+			<span id="rules">Rules of Event</span>
+			<span id="problem">problem statement of the event</span>
+			<span id="contact">contact details of the event</span>
+		</span>
+    </div>
+    <!--<div id="tab2">Two - content</div>
+    <div id="tab3">Three - content</div>
+    <div id="tab4">Four - content</div> -->
+</div>
+<div id="lowerBox" class="cat-box">
+	
+</div>
+</body>
+</html>

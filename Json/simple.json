@@ -1,0 +1,141 @@
+[{
+	"evnt_id":"1",
+	"evnt_name":"excalibur",
+	"evnt_tagline":"Enter tagline here11",
+	"evnt_description":"Description of event excalibur",
+	"evnt_rulesnregulations":"Rules and regulations of event excalibur",
+	"evnt_time":"12pm excal",
+	"venue_name":"jubliee hall excal",
+	"evnt_category":"1",
+	"cat_name":"Technopolis",
+	"coordinators":{
+		"name":"ap excal"
+	}
+},
+{
+	"evnt_id":"2",
+	"evnt_name":"Encoder",
+	"evnt_tagline":"Enter tagline here12",
+	"evnt_description":"Description of event Encoder",
+	"evnt_rulesnregulations":"Rules and regulations of event encoder",
+	"evnt_time":"12pm encoder",
+	"venue_name":"jubliee hall encoder",
+	"evnt_category":"1",
+	"cat_name":"Technopolis",
+	"coordinators":{
+		"name":"ap encoder"
+	}
+},
+{
+	"evnt_id":"1",
+	"evnt_name":"blackbox",
+	"evnt_tagline":"Enter tagline here21",
+	"evnt_description":"Description of event blackbox",
+	"evnt_rulesnregulations":"Rules and regulations of event blackbox",
+	"evnt_time":"12pm blackbox",
+	"venue_name":"jubliee hall blackbox",
+	"evnt_category":"2",
+	"cat_name":"Design",
+	"coordinators":{
+		"name":"ap bb"
+	}
+},
+{
+	"evnt_id":"2",
+	"evnt_name":"humburg",
+	"evnt_description":"Description of event humburg",
+	"evnt_tagline":"Enter tagline here22",
+	"evnt_rulesnregulations":"Rules and regulations of event humburg",
+	"evnt_time":"12pm humburg",
+	"venue_name":"jubliee hall humburg",
+	"evnt_category":"2",
+	"cat_name":"Design",
+	"coordinators":{
+		"name":"ap humb"
+	}
+},
+{
+	"evnt_id":"1",
+	"evnt_name":"technova",
+	"evnt_tagline":"Enter tagline here31",
+	"evnt_description":"Description of event technova",
+	"evnt_rulesnregulations":"Rules and regulations of event technova",
+	"evnt_time":"12pm technova",
+	"venue_name":"jubliee hall technova",
+	"evnt_category":"3",
+	"cat_name":"Papaye vitas",
+	"coordinators":{
+		"name":"ap technova"
+	}
+},
+{
+	"evnt_id":"2",
+	"evnt_name":"webhunt",
+	"evnt_tagline":"Enter tagline here32",
+	"evnt_description":"Description of event webhunt",
+	"evnt_rulesnregulations":"Rules and regulations of event webhunt",
+	"evnt_time":"12pm webhunt",
+	"venue_name":"jubliee hall webhunt",
+	"evnt_category":"3",
+	"cat_name":"Papaye vitas",
+	"coordinators":{
+		"name":"ap webhunt"
+	}
+},
+{
+	"evnt_id":"1",
+	"evnt_name":"junkyard",
+	"evnt_description":"Description of event junkyard",
+	"evnt_tagline":"Enter tagline here 41",
+	"evnt_rulesnregulations":"Rules and regulations of event junkyard",
+	"evnt_time":"12pm junkyard",
+	"venue_name":"jubliee hall junkyard",
+	"evnt_category":"4",
+	"cat_name":"Funzone",
+	"coordinators":{
+		"name":"ap junkyard"
+	}
+},
+{
+	"evnt_id":"2",
+	"evnt_name":"tresure hunt",
+	"evnt_tagline":"Enter tagline here 42",
+	"evnt_description":"Description of event tresure hunt",
+	"evnt_rulesnregulations":"Rules and regulations of event tesurehunt ",
+	"evnt_time":"12pm th",
+	"venue_name":"jubliee hall th",
+	"evnt_category":"4",
+	"cat_name":"Funzone",
+	"coordinators":{
+		"name":"ap th"
+	}
+},
+{
+	"evnt_id":"1",
+	"evnt_name":"big fight",
+	"evnt_tagline":"Enter tagline here51",
+	"evnt_description":"Description of event big fight",
+	"evnt_rulesnregulations":"Rules and regulations of event bigfight",
+	"evnt_time":"12pm bf",
+	"venue_name":"jubliee hall bf",
+	"evnt_category":"5",
+	"cat_name":"managerial",
+	"coordinators":{
+		"name":"ap bf"
+	}
+},
+{
+	"evnt_id":"2",
+	"evnt_name":"informals",
+	"evnt_tagline":"Enter tagline here 52",
+	"evnt_description":"Description of event informals",
+	"evnt_rulesnregulations":"Rules and regulations of event informals",
+	"evnt_time":"12pm informals",
+	"venue_name":"jubliee hall informals",
+	"evnt_category":"5",
+	"cat_name":"managerial",
+	"coordinators":{
+		"name":"ap informals"
+	}
+}
+]
